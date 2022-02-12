@@ -1,6 +1,5 @@
 import { helloworld } from './sub'
 import * as settings from './settings.json'
-
 console.log(settings)
 
 class JonDo {

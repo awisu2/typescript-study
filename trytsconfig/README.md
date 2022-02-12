@@ -31,12 +31,24 @@ _tsconfig.json_
       // "tests/*": ["tests/*"]
     },
 
+    "declaration": true, // generate .d.ts files
+    "declarationDir": "./dist/types", // rootDir of declaration. outDir not overrite this.
+
+    // for debug ==========
+    "sourceMap": true, // generate sousemap files
+
     // if need ==========
-    "resolveJsonModule": true // allow import .json file
+    "resolveJsonModule": true, // allow import .json file
+    "importsNotUsedAsValues": "error", // "error": preserves all import scripts. but error happen if exists not use.
+    "removeComments": true // remove comment
   },
   "include": ["src/**/*.ts", "src/**/*.js"]
 }
 ```
+
+## todo
+
+- [ ] useage with babel. (--noEmit)
 
 ## important
 
@@ -114,3 +126,58 @@ List
 - types:
 
 ### Emit
+
+- declaration: generate .d.ts files
+- declarationDir: rootDir of declaration. outDir not overrite this.
+- declarationMap: generate source map for .d.ts
+  files
+- downlevelIteration:
+- emitBOM: emit BOM. ([Byte order mark \- Wikipedia](https://en.wikipedia.org/wiki/Byte_order_mark))
+- emitDeclarationOnly: emit declaration(.d.ts files) only
+  - tsc has option: `--emitDeclarationOnly`
+- importHelpers: helper of resolve arrays or objects when use downlevelIteration.
+- importsNotUsedAsValues: how `import` works.
+  - remove: drop only reference types.
+  - preserve: keeping even if not using.
+  - error: preserves all but error happen if exists not use.
+- inlineSourceMap:
+- inlineSources:
+- mapRoot:
+- newLine(CRLF/LF): end of line's code
+- noEmit: no emit. for use other tool like Bable or swc...etc
+- noEmitHelpers:
+- noEmitOnError: no output files at error.
+- outDir: output directory. lookup resolve path from rootDir.
+- outFile:
+- preserveValueImports:
+- removeComments: remove comment
+- sourceMap: generate soursemap files
+  - [ソースマップを使用する \- 開発ツール \| MDN](https://developer.mozilla.org/ja/docs/Tools/Debugger/How_to/Use_a_source_map)
+- sourceRoot:
+- stripInternal:
+
+### JavaScript Support
+
+- [TypeScript: TSConfig Reference \- Docs on every TSConfig option](https://www.typescriptlang.org/tsconfig#JavaScript_Support_6247)
+
+**LIST**
+
+- allowJs: include .js file for build
+- checkJs:
+- maxNodeModuleJsDepth:
+
+### Language and Environment
+
+- [TypeScript: TSConfig Reference \- Docs on every TSConfig option](https://www.typescriptlang.org/tsconfig#Language_and_Environment_6254)
+
+**LIST**
+
+- jsx
+- jsxFactory
+- jsxImportSource
+- lib
+- noLib
+- reactNamespace
+- [target](https://www.typescriptlang.org/tsconfig#target)
+  - default: es3
+- useDefineForClassFields

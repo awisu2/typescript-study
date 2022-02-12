@@ -2,7 +2,7 @@
   "compilerOptions": {
     "module": "CommonJS", // transpiled files module type. typicaly set CommonJs/ES2015. (ESNext is latest version)
 
-    "strict": false, // collective set of alwaysStrict, strictNullChecks, strictBindCallApply, strictFunctionTypes, strictPropertyInitialization, noImplicitAny, noImplicitThis, useUnknownInCatchVariables
+    "strict": true, // collective set of alwaysStrict, strictNullChecks, strictBindCallApply, strictFunctionTypes, strictPropertyInitialization, noImplicitAny, noImplicitThis, useUnknownInCatchVariables
     "allowJs": true, // include .js file for build
     "allowUnreachableCode": false, // not allow unreachable code (ex: double return)
     "noImplicitOverride": true, // need `override` to override class's function
@@ -20,8 +20,16 @@
       // "tests/*": ["tests/*"]
     },
 
+    "declaration": true, // generate .d.ts files
+    "declarationDir": "./dist/types", // rootDir of declaration. outDir not overrite this.
+
+    // for debug ==========
+    "sourceMap": true, // generate sousemap files
+
     // if need ==========
-    "resolveJsonModule": true // allow import .json file
+    "resolveJsonModule": true, // allow import .json file
+    "importsNotUsedAsValues": "error", // "error": preserves all import scripts. but error happen if exists not use.
+    "removeComments": true // remove comment
   },
   "include": ["src/**/*.ts", "src/**/*.js"]
 }
