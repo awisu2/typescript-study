@@ -11,17 +11,28 @@ _tsconfig.json_
 ```json
 {
   "compilerOptions": {
-    "outDir": "dist", // output directory
+    "module": "CommonJS", // transpiled files module type. typicaly set CommonJs/ES2015. (ESNext is latest version)
 
+    "strict": false, // collective set of alwaysStrict, strictNullChecks, strictBindCallApply, strictFunctionTypes, strictPropertyInitialization, noImplicitAny, noImplicitThis, useUnknownInCatchVariables
     "allowJs": true, // include .js file for build
-
     "allowUnreachableCode": false, // not allow unreachable code (ex: double return)
-    "alwaysStrict": true, // write out "use strict"
-    "noImplicitAny": true, // need type all fuction arguments
     "noImplicitOverride": true, // need `override` to override class's function
     "noImplicitReturns": true, // if set return type to function need return value in all code/pattern.
     "noUnusedLocals": true, // error if exists unused local value
-    "noUnusedParameters": true // error if exists unused function arguments
+    "noUnusedParameters": true, // error if exists unused function arguments
+
+    "outDir": "dist", // output directory
+    "baseUrl": ".", // base path for resolve not absolute path. this itself is resolve from tsconfig.json's directory
+    // alias paths of import/require. lookup locations relative to the baseUrl.
+    "paths": {
+      "*": ["./node_modules"],
+      "src/*": ["src/*"]
+      // "libs/*": ["src/libs/*"],
+      // "tests/*": ["tests/*"]
+    },
+
+    // if need ==========
+    "resolveJsonModule": true // allow import .json file
   },
   "include": ["src/**/*.ts", "src/**/*.js"]
 }
@@ -49,7 +60,7 @@ _tsconfig.json_
   - noImplicitThis
   - useUnknownInCatchVariables
 
-#### each settings detail
+#### each strict's settings detail
 
 - alwaysStrict: write `use strict`
 - strictNullChecks: error if use nullable value without check
@@ -83,3 +94,23 @@ List
     - ok: `console.log(a['a'])`, error: `console.log(a.a)`
 - noUnusedLocals(true/false): error if exists unused local value
 - noUnusedParameters(true/false): error if exists unused function arguments
+
+### modules
+
+- allowUmdGlobalAccess: allow umd module
+  - ex: use jquery only write `<scrip>` with cdn. it'not write import.
+    - [jQuery CDN](https://releases.jquery.com/)
+- baseUrl: base path for resolve not absolute path. this itself is resolve from tsconfig.json's directory
+- module: transpiled files module type. typicaly set CommonJs/ES2015. (ESNext is latest version.)
+  - sample of each module: [Module](https://www.typescriptlang.org/tsconfig#module)
+  - set CommonJs if just use after transpile by `tsc`.
+- moduleResolution: Specify the module resolution strategy
+- noResolve: if true. not examine the initial set of file for import and reference directive and add these resolved files
+- paths: alias paths of import/require. lookup locations relative to the baseUrl.
+- resolveJsonModule: allow import .json file
+- rootDir: top directory of all of code. error if use out of range path from this.
+- rootDirs:
+- typeRoots:
+- types:
+
+### Emit
