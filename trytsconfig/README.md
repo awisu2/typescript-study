@@ -12,6 +12,7 @@ _tsconfig.json_
 {
   "compilerOptions": {
     "module": "CommonJS", // transpiled files module type. typicaly set CommonJs/ES2015. (ESNext is latest version)
+    "target": "ES5", // code target. [ECMAScript 6 compatibility table](http://kangax.github.io/compat-table/es6/)
 
     "strict": false, // collective set of alwaysStrict, strictNullChecks, strictBindCallApply, strictFunctionTypes, strictPropertyInitialization, noImplicitAny, noImplicitThis, useUnknownInCatchVariables
     "allowJs": true, // include .js file for build
