@@ -1,0 +1,15 @@
+{
+  "name": "trytsconfig",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "awisu2",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "index": "node ./dist/index.js"
+  }
+}

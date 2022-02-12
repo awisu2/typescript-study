@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": "dist", // output directory
+
+    "strict": true, // collective set of alwaysStrict, strictNullChecks, strictBindCallApply, strictFunctionTypes, strictPropertyInitialization, noImplicitAny, noImplicitThis, useUnknownInCatchVariables
+
+    "allowJs": true, // include .js file for build
+    "allowUnreachableCode": false, // not allow unreachable code (ex: double return)
+
+    "noImplicitOverride": true, // need `override` to override class's function
+    "noImplicitReturns": true, // if set return type to function need return value in all code/pattern.
+    "noUnusedLocals": true, // error if exists unused local value
+    "noUnusedParameters": true // error if exists unused function arguments
+  },
+  "include": ["src/**/*.ts", "src/**/*.js"]
+}
