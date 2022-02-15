@@ -6,6 +6,10 @@ my study tsconfig.json
 
 for my basic setting
 
+```bash
+npm add -D @types/node
+```
+
 _tsconfig.json_
 
 ```json
