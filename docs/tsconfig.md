@@ -1,19 +1,20 @@
-# tsconfig.json について
+# about tsconfig.json
 
-- ドキュメント: [TypeScript: Documentation \- What is a tsconfig\.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
-- リファレンス: [TypeScript: TSConfig Reference \- Docs on every TSConfig option](https://www.typescriptlang.org/tsconfig)
+- official document: [TypeScript: Documentation \- What is a tsconfig\.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
+- official reference: [TypeScript: TSConfig Reference \- Docs on every TSConfig option](https://www.typescriptlang.org/tsconfig)
+
+**NOTE**
+
+- `tsconfig.json`(または `jsconfig.json`)という名前でプロジェクトのルートディレクトリに設置
+  - `jsconfig.json`はjavascript用のフラグがデフォルトで有効になっている
+- 指定なくtscが実行された時、カレントディレクトリまたは親ディレクトリからtsconfi.jsonを検索します(--project, -p でも指定したディレクトリで同様の挙動)
+- more details: [typescript\-study/trytsconfig at main · awisu2/typescript\-study](https://github.com/awisu2/typescript-study/tree/main/trytsconfig)
 
 ## Todos
 
 - [] referencesの詳細
 - [] watchOptionsの詳細
 - [] typeAcquisitionの詳細
-
-## メモ
-
-- `tsconfig.json`(または `jsconfig.json`)という名前でプロジェクトのルートディレクトリに設置
-  - `jsconfig.json`はjavascript用のフラグがデフォルトで有効になっている
-- 指定なくtscが実行された時、カレントディレクトリまたは親ディレクトリからtsconfi.jsonを検索します(--project, -p でも指定したディレクトリで同様の挙動)
 
 ## サンプル
 
