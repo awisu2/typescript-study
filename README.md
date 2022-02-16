@@ -8,7 +8,7 @@ summary of my typescript study
 
 ## summary
 
-- my node study: [awisu2/node\-study](https://github.com/awisu2/node-study)
+- [awisu2/node\-study: summary of my node study](https://github.com/awisu2/node-study)
 - my basic settings(tsconfig.json, npm install...etc): write below
 - 
 
