@@ -58,4 +58,4 @@ _tsconfig.json_
 ### tsconfig
 
 - [tsconfig.json](./docs/tsconfig.md)
-- [trytsconfg](./docs/trytsconfig): i tried and checked tsconfig behavior
+- [trytsconfg](./trytsconfig): i tried and checked tsconfig behavior
