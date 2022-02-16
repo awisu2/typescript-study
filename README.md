@@ -6,10 +6,25 @@ typescriptの勉强、まとめ
 
 - javascriptに構文の追加を行ったもの。型宣言が非常に強力
 
+## summary
+
+- my node study: [awisu2/node\-study](https://github.com/awisu2/node-study)
+- my basic settings(tsconfig.json, npm install...etc): write below
+- 
+
+## docs
+
+### tsconfig
+
+- [tsconfig.json](./docs/tsconfig.md)
+- [trytsconfg](./trytsconfig): i tried and checked tsconfig behavior
+
 ## my basic setting
 
 ```bash
-npm add -D @types/node
+npm install -D typescript @types/node
+# compile
+npx tsc
 ```
 
 _tsconfig.json_
@@ -53,9 +68,3 @@ _tsconfig.json_
 }
 ```
 
-## docs
-
-### tsconfig
-
-- [tsconfig.json](./docs/tsconfig.md)
-- [trytsconfg](./trytsconfig): i tried and checked tsconfig behavior
