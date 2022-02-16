@@ -1,6 +1,6 @@
 # typescript-study
 
-typescriptの勉强、まとめ
+summary of my typescript study
 
 [TypeScript: JavaScript With Syntax For Types\.](https://www.typescriptlang.org/)
 
