@@ -6,7 +6,7 @@ summary of my typescript study
 
 - javascriptに構文の追加を行ったもの。型宣言が非常に強力
 
-## summary
+## basisc
 
 - [awisu2/node\-study: summary of my node study](https://github.com/awisu2/node-study)
 - my basic settings(tsconfig.json, npm install...etc): write below
