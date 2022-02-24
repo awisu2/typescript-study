@@ -1,12 +1,21 @@
 # typescript-study
 
-summary of my typescript study
+my typescript study
 
-[TypeScript: JavaScript With Syntax For Types\.](https://www.typescriptlang.org/)
+- [TypeScript: JavaScript With Syntax For Types\.](https://www.typescriptlang.org/)
+
+```bash
+npm install -D typescript @types/node
+echo "console.log('hello world')" > index.ts
+npx tsc index.ts
+node index.js
+```
+
+NOTE
 
 - javascriptに構文の追加を行ったもの。型宣言が非常に強力
 
-## basisc
+## basics
 
 - [awisu2/node\-study: summary of my node study](https://github.com/awisu2/node-study)
 - my basic settings(tsconfig.json, npm install...etc): write below
